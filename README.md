@@ -7,6 +7,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -36,6 +37,10 @@ Users should be able to:
 #### Mobile 375px
 ![](./screenshots/mobile-screenshot1.jpg)
 ![](./screenshots/mobile-screenshot2.jpg)
+
+### Link
+
+- Live Site URL: [Github Pages](https://sebastian-agrano.github.io/frontend-mentor-faq-accordion-card/)
 
 ## My process
 
