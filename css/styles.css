@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+/* Rooteo de variables */
 :root {
-  /*COLORES PRIMARIOS*/
-  --color-text-bold: hsl(238, 29%, 16%);
-  --color-text-hover: hsl(14, 88%, 65%);
-  --color-gradient-up: hsl(273, 75%, 66%);
-  --color-gradient-down: hsl(240, 73%, 65%);
   --color-card: white;
-  /*COLORES SECUNDARIOS*/
+  --color-dividers: hsl(240, 5%, 91%);
+  --color-gradient-down: hsl(240, 73%, 65%);
+  --color-gradient-up: hsl(273, 75%, 66%);
   --color-text-faq: hsl(237, 12%, 33%);
   --color-text-info: hsl(240, 6%, 50%);
-  --color-dividers: hsl(240, 5%, 91%);
-  /*FUENTE*/
-  --font: "Kumbh Sans", sans-serif;
+  --color-text-hover: hsl(14, 88%, 65%);
+  --color-title: hsl(238, 29%, 16%);
+
+  --primary-font: "Kumbh Sans", sans-serif;
 }
 
+/* Reseteo de variables */
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +24,10 @@
 html {
   min-height: 100vh;
   font-size: 62.5%;
-  font-family: var(--font);
+  font-family: var(--primary-font);
 }
 
+/* Variables generales */
 body {
   font-size: 1.2rem;
   background: linear-gradient(
@@ -69,12 +70,12 @@ body {
   width: 100%;
 }
 
-.tittle {
+.title {
   margin: 2rem 0 1.5rem;
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  color: var(--color-text-bold);
+  color: var(--color-title);
 }
 
 .accordion {
@@ -83,6 +84,14 @@ body {
   justify-content: space-between;
   padding: 1.5rem 0 1rem;
   border-bottom: solid 1px var(--color-dividers);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .question {
+    color: var(--color-text-hover);
+  }
 }
 
 .question {
@@ -102,30 +111,22 @@ body {
   padding: 0.5rem 0;
 }
 
-.accordion:hover {
-  cursor: pointer;
-}
-
-.accordion:hover .question {
-  color: var(--color-text-hover);
-}
-
 .show-info {
   display: initial;
 }
 
-.bold-tittle {
+.bold-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-text-bold);
+  color: var(--color-title);
 }
 
 .image-rotate {
   transform: rotate(180deg);
 }
 
-/*MEDIA QUERIES*/
-@media (min-width: 550px) {
+/* Medias queries */
+@media (width > 550px) {
   .card {
     width: 50rem;
     margin-top: 23.5rem;
@@ -136,7 +137,7 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (width > 1024px) {
   html {
     display: flex;
     justify-content: center;
@@ -205,7 +206,7 @@ body {
     padding: 4rem 10rem 8rem 0;
   }
 
-  .tittle {
+  .title {
     text-align: left;
   }
 
